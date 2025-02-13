@@ -1,0 +1,7 @@
+CREATE TABLE descuentos (
+  id_descuento INT AUTO_INCREMENT PRIMARY KEY,
+  tipo VARCHAR(50),
+  valor DECIMAL(10,2),
+  fecha_creacion DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  fecha_modificacion DATETIME ON UPDATE CURRENT_TIMESTAMP
+) ENGINE = InnoDB;
