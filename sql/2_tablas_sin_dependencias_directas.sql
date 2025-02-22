@@ -1,0 +1,74 @@
+
+-- ROLES
+CREATE TABLE roles (
+  id_rol INT AUTO_INCREMENT PRIMARY KEY,
+  descripcion VARCHAR(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- PAISES
+CREATE TABLE paises (
+  id_pais INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- FORMAS_PAGO
+CREATE TABLE formas_pago (
+  id_formas_pago INT AUTO_INCREMENT PRIMARY KEY,
+  descripcion VARCHAR(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- UNIDADES_MEDIDAS
+CREATE TABLE unidades_medidas (
+  id_unidad_medida INT AUTO_INCREMENT PRIMARY KEY,
+  descripcion VARCHAR(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- CATEGORIAS
+CREATE TABLE categoria (
+  id_categoria INT AUTO_INCREMENT PRIMARY KEY,
+  descripcion VARCHAR(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- SUBCATEGORIA
+CREATE TABLE subcategoria (
+  id_subcategoria INT AUTO_INCREMENT PRIMARY KEY,
+  descripcion VARCHAR(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- TIPOS_MOLIENDA
+CREATE TABLE tipos_molienda (
+  id_tipo_molienda INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- ESTADO_PEDIDO
+CREATE TABLE estado_pedido (
+  id_estado_pedido INT AUTO_INCREMENT PRIMARY KEY,
+  descripcion VARCHAR(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- DESCUENTOS
+CREATE TABLE descuentos (
+  id_descuentos INT AUTO_INCREMENT PRIMARY KEY,
+  tipo VARCHAR(50),
+  valor DECIMAL(10,2)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- PROMOCIONES
+CREATE TABLE promociones (
+  id_promociones INT AUTO_INCREMENT PRIMARY KEY,
+  descripcion VARCHAR(255),
+  fecha_inicio DATE,
+  fecha_fin DATE,
+  activo BOOLEAN DEFAULT 1,
+  fecha_creacion DATETIME,
+  fecha_modificacion DATETIME
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- TRANSPORTE
+CREATE TABLE transporte (
+  id_transporte INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(255),
+  cuit VARCHAR(50),
+  descripcion TEXT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
