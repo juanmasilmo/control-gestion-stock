@@ -37,3 +37,11 @@ CREATE TABLE proveedores (
   observaciones TEXT,
   FOREIGN KEY (id_persona) REFERENCES personas(id_persona)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- EMPLEADOS (depende de PERSONAS)
+CREATE TABLE empleados (
+  id_empleado INT AUTO_INCREMENT PRIMARY KEY,
+  id_persona INT NOT NULL,
+  observaciones TEXT,
+  FOREIGN KEY (id_persona) REFERENCES personas(id_persona)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
